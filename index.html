@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       *{
+        margin: 0;
+        padding:0;
+        box-sizing: border-box;
+       }
+      .das{
+        background-color: black;
+        height: 60px;
+        color: white;
+        padding: 15px;
+      font-size: 1.5rem;
+      }
+      #addRowBtn{
+        margin-left: 20px;
+        width: 250px;
+        height: 30px;
+        border-radius: 5px;
+        background-color:black;
+        color: white;
+      }
+      table {
+       border-collapse: collapse;
+      }
+
+      table, th, td {
+        border: 1px solid black;
+     }
+
+     th, td {
+      padding: 10px;
+     }
+
+      input[type="text"] {
+        width: 100%;
+         box-sizing: border-box;
+      }
+      
+      table{
+       width: 100%;
+ 
+      }
+    </style>
+</head>
+<body>
+   <div class="das"><p>Dashboard</p></div>
+   <br><br>
+   <input type="submit" id="addRowBtn" value="Add a new row">
+   <br><br><br>
+   <table id="myTable">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>studen name</th>
+        <th>studen Roll</th>
+        <th>Subject</th>
+        <th>Marks</th>
+        <th>Marked By</th>
+        <th>Save</th>
+
+      </tr>
+    </thead>
+    <tbody>
+    </tbody>
+  </table>
+
+  <script>
+     const addRowBtn = document.getElementById('addRowBtn');
+     const table = document.getElementById('myTable');
+     const tbody = table.querySelector('tbody');
+     let idCounter = 0;
+     
+     const myTable = document.getElementById("my-table");
+const cells = table.querySelectorAll("th");
+
+// cells.forEach(function(cell) {
+//   cell.addEventListener("input", function() {
+//     // Get the updated value of the cell
+//     const newValue = this.innerText;
+
+//     // Get the row and column index of the cell
+//     const rowIndex = this.parentNode.rowIndex - 1;
+//     const colIndex = this.cellIndex;
+
+//     // Update the table data array with the new value
+//     tableData[rowIndex][Object.keys(tableData[rowIndex])[colIndex]] = newValue;
+
+//     // Log the updated table data array to the console
+//     console.log(tableData);
+//   });
+// });
+
+// const addRowBtn = document.getElementById('add-row-btn');
+// const tableBody = document.querySelector('#my-table tbody');
+
+addRowBtn.addEventListener('click', function() {
+  idCounter++;
+
+  const newRow = tbody.insertRow();
+  const newCell1 = newRow.insertCell();
+  const newCell2 = newRow.insertCell();
+  const newCell3 = newRow.insertCell();
+  const newCell4 = newRow.insertCell();
+  const newCell5 = newRow.insertCell();
+  const newCell6 = newRow.insertCell();
+  const newCell7 = newRow.insertCell();
+  
+  newCell1.innerText = idCounter;
+
+//   const input1 = document.createElement('text');
+//   input1.type = 'submit';
+//   newCell2.appendChild(input1);
+
+  newcell7.innerHTML = `<button class="save-btn">Save</button>`;
+  const saveBtn = newcell7.querySelector('.save-btn');
+//   saveBtn.addEventListener('click', () => {
+//     // Handle save functionality here
+//     console.log('Save button clicked');
+//   });
+// });
+
+//   const input2 = document.createElement('input');
+//   input2.type = 'text';
+//   newCell3.appendChild(input2);
+
+//   const input3 = document.createElement('input');
+//   input3.type = 'text';
+//   newCell4.appendChild(input3);
+});
+
+
+  </script>
+</body>
+</html>
